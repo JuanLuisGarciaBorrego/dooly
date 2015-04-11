@@ -17,6 +17,6 @@ class DefaultController extends BaseController
 
     public function homeAction()
     {
-        return "Hello dolly";
+        return $this->container->json('Hello Sally');
     }
 }
