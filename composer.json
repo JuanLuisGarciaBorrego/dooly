@@ -1,6 +1,7 @@
 {
     "require": {
-        "silex/silex": "~1.2"
+        "silex/silex": "~1.2",
+        "symfony/twig-bridge": "~2.3"
     },
     "require-dev": {
         "phpunit/phpunit": "~3.7.0",

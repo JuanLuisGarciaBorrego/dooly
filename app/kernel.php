@@ -5,8 +5,15 @@
  */
 
 use Silex\Application;
+use Silex\Provider\UrlGeneratorServiceProvider;
 
 $app = new Application();
+
+/*
+ * Services Providers
+ */
+
+$app->register(new UrlGeneratorServiceProvider());
 
 /*
  * Main Routes
