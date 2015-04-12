@@ -7,7 +7,12 @@
 use Silex\Application;
 use Silex\Provider\UrlGeneratorServiceProvider;
 
-$app = new Application();
+class DoolyApplication extends Application
+{
+    use Application\UrlGeneratorTrait;
+}
+
+$app = new DoolyApplication();
 
 /*
  * Services Providers
