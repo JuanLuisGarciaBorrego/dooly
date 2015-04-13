@@ -6,6 +6,7 @@
 
 use Silex\Application;
 use Silex\Provider\UrlGeneratorServiceProvider;
+use Silex\Provider\DoctrineServiceProvider;
 
 class DoolyApplication extends Application
 {
@@ -19,6 +20,16 @@ $app = new DoolyApplication();
  */
 
 $app->register(new UrlGeneratorServiceProvider());
+$app->register(new DoctrineServiceProvider(), array(
+    'db.options' => array(
+        'driver'    => 'pdo_mysql',
+        'host'      => 'localhost',
+        'dbname'    => 'MY_DATABASE',
+        'user'      => 'MY_USERNAME',
+        'password'  => 'MY_PASSWORD',
+        'charset'   => 'utf8'
+    )
+));
 
 /*
  * Main Routes
